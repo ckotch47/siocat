@@ -1,0 +1,10 @@
+{
+  "url": "http://localhost:3000",
+  "headers": {},
+  "auth": {},
+  "transports": ["websocket"],
+  "namespaces": ["/space", "/space2"],
+  "wait_timeout": 5,
+  "logger": true,
+  "engineio_logger": true
+}

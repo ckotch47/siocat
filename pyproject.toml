@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "siocat"
+version = "2024.08.01a"
+description = ""
+authors = ["ckotch47"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.10"
+python-socketio = {extras = ["asyncio-client"], version = "^5.11.3"}
+print-color = "^0.4.6"
+pyfiglet = "^1.0.2"
+argparse = "^1.4.0"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+siocat = 'siocat:main'
