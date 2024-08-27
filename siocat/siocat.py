@@ -2,6 +2,7 @@ import asyncio
 import json
 import threading
 import socketio
+from distlib.compat import raw_input
 from print_color import print
 
 from siocat.utils.parser import m_arguments
@@ -56,7 +57,8 @@ class SioCat:
 
     def get_event(self):
         try:
-            user_event = input()
+            user_event = raw_input()
+            print(user_event)
             if user_event.find('.json') != -1:
                 self.parse_and_send_get_event_from_file(user_event)
             else:
@@ -64,6 +66,9 @@ class SioCat:
         except Exception as e:
             print(e)
             self.get_event()
+
+
+
 
     async def connect(self, config: dict):
         await sio.connect(
